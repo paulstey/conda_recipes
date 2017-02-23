@@ -9,4 +9,3 @@
  
  SUBDIRS = $(SRC_DIR)/annotateBed \
  		  $(SRC_DIR)/bamToBed \
-		  
