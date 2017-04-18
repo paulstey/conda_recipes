@@ -1,0 +1,19 @@
+package:
+  name: iCRORN
+  version: 0.97
+
+source:
+  fn: iCORN-v0.97.tar.gz
+  url: https://sourceforge.net/projects/icorn/files/iCORN-v0.97.tar.gz
+  
+build:
+  number: 1
+
+requirements:
+  build:
+    - gcc
+    - zlib
+
+about:
+  home: http://icorn.sourceforge.net/
+
