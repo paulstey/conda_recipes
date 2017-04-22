@@ -1,0 +1,27 @@
+# This file created by conda-build 2.0.7
+# meta.yaml template originally from:
+# /opt/recipe, last modified Thu Jan 19 09:39:54 2017
+# ------------------------------------------------
+
+package:
+    name: tophat
+    version: 2.1.1
+source:
+    fn: tophat-2.1.1.Linux_x86_64.tar.gz
+    md5: 97fe58465a01cb0a860328fdb1993660
+    url: http://ccb.jhu.edu/software/tophat/downloads/tophat-2.1.1.Linux_x86_64.tar.gz
+build:
+    number: '1'
+requirements:
+    build:
+        - python
+    run:
+        - python
+        - bowtie2 <=2.2.5
+test:
+    commands:
+        - (tophat --version 2>&1) > /dev/null
+about:
+    home: http://ccb.jhu.edu/software/tophat/index.shtml
+    license: Boost Software License
+    summary: A spliced read mapper for RNA-Seq
