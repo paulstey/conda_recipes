@@ -1,0 +1,25 @@
+package:
+  name:	metamap
+  version: 2016v2
+
+source:
+  fn: public_mm_linux_main_2016v2.tar.bz2
+  url: https://s3.amazonaws.com/pstey-public/public_mm_linux_main_2016v2.tar.bz2
+
+
+build:
+  features:
+
+
+requirements:
+  build:
+    - bzip2
+ 
+  run:
+    - java
+
+about:
+  home:	https://metamap.nlm.nih.gov/
+  summary: "MetaMap is a highly configurable program developed by Dr. Alan (Lan) Aronson at the National Library of Medicine (NLM) to map biomedic\
+al text to the UMLS Metathesaurus or, equivalently, to discover Metathesaurus concepts referred to in text."
+  license: Public Domain
