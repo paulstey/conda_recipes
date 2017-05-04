@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install -y m4 patch cmake gfortran git openssl xz-utils pkg-config 
+sudo apt-get install -y m4 patch cmake gfortran git openssl xz-utils pkg-config libssl-dev
 
 export OPENBLAS_DYNAMIC_ARCH=0
 export OPENBLAS_NO_AVX2=1
