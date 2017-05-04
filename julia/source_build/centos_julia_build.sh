@@ -1,11 +1,6 @@
 #!/bin/bash
 
-sudo yum install -y
-    m4 \
-    patch \
-    cmake \
-    libgfortran \
-    git
+sudo yum install -y m4 patch cmake libgfortran git
 
 export OPENBLAS_DYNAMIC_ARCH=0
 export OPENBLAS_NO_AVX2=1
