@@ -5,7 +5,10 @@ sudo apt-get install -y
     patch \
     cmake \
     gfortran \
-    git
+    git \
+    openssl \
+    xz-utils \
+    pkg-config 
 
 export OPENBLAS_DYNAMIC_ARCH=0
 export OPENBLAS_NO_AVX2=1
