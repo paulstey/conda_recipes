@@ -1,0 +1,39 @@
+# This file created by conda-build 2.1.4
+# meta.yaml template originally from:
+# /r-devtools, last modified Mon Apr  3 16:50:20 2017
+# ------------------------------------------------
+
+package:
+    name: r-devtools
+    version: 1.12.0
+source:
+    fn: devtools_1.12.0.tar.gz
+    url:
+        - https://cran.r-project.org/src/contrib/devtools_1.12.0.tar.gz
+        - https://cran.r-project.org/src/contrib/Archive/devtools/devtools_1.12.0.tar.gz
+build:
+    number: '0'
+    rpaths:
+        - lib/R/lib/
+        - lib/
+    string: r3.3.2_0
+requirements:
+    build: []
+    run:
+        - r-base
+        - r-digest
+        - r-git2r >=0.11.0
+        - r-httr >=0.4
+        - r-jsonlite
+        - r-memoise >=1.0.0
+        - r-rstudioapi >=0.2.0
+        - r-whisker
+        - r-withr
+test:
+    commands:
+        - $R -e "library('devtools')"
+about:
+    home: https://github.com/hadley/devtools
+    license: GPL (>= 2)
+    license_family: GPL3
+    summary: Collection of package development tools.

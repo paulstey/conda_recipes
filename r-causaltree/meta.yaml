@@ -1,0 +1,23 @@
+# This file created by conda-build 2.1.4
+# meta.yaml template originally from:
+# /r-causalTree, last modified Mon Apr  3 19:01:51 2017
+# ------------------------------------------------
+
+package:
+    name: r-causaltree
+    version: '0.0'
+source:
+    fn: master.tar.gz
+    url: https://github.com/susanathey/causalTree/archive/master.tar.gz
+build:
+    rpaths:
+        - lib/R/lib/
+        - lib/
+    string: r3.3.2_0
+requirements:
+    build: []
+    run:
+        - r
+        - r-rpart
+        - r-rpart-plot
+        - r-data.table

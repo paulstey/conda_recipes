@@ -1,0 +1,23 @@
+# This file created by conda-build 2.1.4
+# meta.yaml template originally from:
+# /r-rpart.plot, last modified Mon Apr  3 19:00:09 2017
+# ------------------------------------------------
+
+package:
+    name: r-rpart-plot
+    version: 2.1.1
+source:
+    fn: rpart-plot_2.1.1.tar.gz
+    url:
+        - https://github.com/cran/rpart.plot/archive/R-3.0.3.tar.gz
+build:
+    number: '0'
+    rpaths:
+        - lib/R/lib/
+        - lib/
+    string: r3.3.2_0
+requirements:
+    build: []
+    run:
+        - r-base
+        - r-rpart
