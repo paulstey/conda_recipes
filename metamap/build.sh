@@ -1,8 +1,8 @@
 #!/bin/bash
 
-JAVA_BINDIR=dirname `which java`
-
-JAVA_HOME=dirname $JAVA_BINDIR 
+JAVA_PROG=`which java`
+JAVA_BINDIR=`dirname $JAVA_PROG`
+JAVA_HOME=`dirname $JAVA_BINDIR` 
 
 export PATH=$PREFIX/public_mm/bin:$PATH
 
