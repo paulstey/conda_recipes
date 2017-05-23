@@ -8,6 +8,7 @@ sed -i 's/\/bin\/java//' $PREFIX/java_path.txt
 export JAVA_HOME=`cat $PREFIX/java_path.txt`
 export PATH=$PREFIX/public_mm/bin:$PATH
 
-cd $PREFIX/public_mm
+#cd $PREFIX/public_mm
+cd $SRC_DIR
 
 ./bin/install.sh
