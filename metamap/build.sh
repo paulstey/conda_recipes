@@ -11,8 +11,8 @@ export PATH=$PREFIX/public_mm/bin:$PATH
 BASEDIR=$PREFIX/share
 cp -R $SRC_DIR  $BASEDIR
 
-export $BASEDIR
-export $JAVA_HOME
+export BASEDIR
+export JAVA_HOME
 
 cd $BASEDIR
 
