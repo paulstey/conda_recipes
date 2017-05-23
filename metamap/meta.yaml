@@ -15,8 +15,6 @@ requirements:
   build:
     - bzip2
  
-  run:
-    - java
 
 about:
   home:	https://metamap.nlm.nih.gov/
