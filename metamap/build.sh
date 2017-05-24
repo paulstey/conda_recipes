@@ -8,13 +8,13 @@ export PATH=$PREFIX/public_mm/bin:$PATH
 
 #cd $PREFIX/public_mm
 
-BASEDIR=$PREFIX/share
+BASEDIR=$PREFIX
 cp -R $SRC_DIR  $BASEDIR
 
 export BASEDIR
 export JAVA_HOME
 
-cd $BASEDIR
+cd $BASEDIR/public_mm
 
 ./bin/install.sh
 
