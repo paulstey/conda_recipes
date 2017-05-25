@@ -16,30 +16,27 @@ export JAVA_HOME
 
 cd $BASEDIR/public_mm
 
+mkdir -p $BASEDIR/public_mm/MedPost-SKR/src/gov/gov       # HACK: this is the worst 
+
 ./bin/install.sh
 
 
 
 
 
-## last version
-#!/bin/bash
+###
+# The version below generates the "/public_mm/MedPost-SKR/gov/gov not found" error
+###
+#JAVA_PROG=`which java`
+#JAVA_BINDIR=`dirname $JAVA_PROG`
+#JAVA_HOME=`dirname $JAVA_BINDIR` 
 
-#which java > $PREFIX/java_path.txt
-#sed -i 's/\/bin\/java//' $PREFIX/java_path.txt
-
-#export JAVA_HOME=`cat $PREFIX/java_path.txt`
 #export PATH=$PREFIX/public_mm/bin:$PATH
 
-##JAR=$PREFIX/jar
-#SHARE_DIR=$PREFIX/share
+#BASEDIR=$PREFIX
+#cp -R $SRC_DIR  $BASEDIR
 
-# make a libexec directory
-##mkdir -p $JAR
-
-##cd $SRC_DIR
-#cp -R $SRC_DIR $SHARE_DIR
-
-#cd $SHARE_DIR
-
+#export BASEDIR
+#export JAVA_HOME
+#cd $BASEDIR/public_mm
 #./bin/install.sh
