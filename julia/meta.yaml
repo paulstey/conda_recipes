@@ -1,30 +1,38 @@
-# This file created by conda-build 1.20.3
-# meta.yaml template originally from:
-# /bioconda-recipes/recipes/julia, last modified Wed Jul  6 13:39:10 2016
-# ------------------------------------------------
-
 package:
-    name: julia
-    version: 0.5.2
+  name: julia
+  version: "0.5.2"
+
 source:
-    fn: julia-0.5.2-linux-x86_64.tar.gz
-    url: https://julialang.s3.amazonaws.com/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz
+  fn: julia-0.5.2-linux-x86_64.tar.gz
+  url: https://julialang.s3.amazonaws.com/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz
+
+
 build:
-    number: '1'
-    rpaths:
-        - lib/julia/
+  skip: True # [osx]
+  rpaths:
+    - lib/
+    - lib/julia/
+  binary_relocation: False  ## NOTE: default is true
+
+  number: 1
+
 requirements:
-    build:
-        - gcc
-        - zlib
-    run:
-        - zlib
-        - libgcc <5.0
-test:
-    commands:
-        - julia -v
+  build:
+    - gcc # [linux]
+    - llvm # [osx]
+    - zlib
+  run:
+    - zlib
+    - libgcc # [linux]
+
+
 about:
-    home: http://julialang.org/
-    license: MIT
-    license_file: LICENSE.md
-    summary: A high-performance dynamic programming language for data science
+  home: http://julialang.org/
+  license: MIT
+  license_file: LICENSE.md
+  summary: A high-performance dynamic programming language for data science
+
+test:
+  commands:
+    - "julia -v"
+    
