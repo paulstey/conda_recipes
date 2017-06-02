@@ -23,7 +23,7 @@ requirements:
     - zlib
   run:
     - zlib
-    - libgcc # [linux]
+    - libgcc >=5.2.0 # [linux]
 
 
 about:
