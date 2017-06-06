@@ -2,21 +2,25 @@
 
 JAVA_PROG=`which java`
 JAVA_BINDIR=`dirname $JAVA_PROG`
-JAVA_HOME=`dirname $JAVA_BINDIR` 
+JAVA_HOME=`dirname $JAVA_BINDIR`
 
 export PATH=$PREFIX/public_mm/bin:$PATH
 
 #cd $PREFIX/public_mm
 
-BASEDIR=$PREFIX
-cp -R $SRC_DIR  $BASEDIR
+BASEDIR=$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM
+
+#cp -R $SRC_DIR  $BASEDIR
+cp -R * $BASEDIR
 
 export BASEDIR
 export JAVA_HOME
 
 cd $BASEDIR/public_mm
 
-mkdir -p $BASEDIR/public_mm/MedPost-SKR/src/gov/gov       # HACK: this is the worst 
+rm $BASEDIR/public_mm/MedPost-SKR/src/gov
+
+#mkdir -p $BASEDIR/public_mm/MedPost-SKR/src/gov/gov       # HACK: this is the worst
 
 ./bin/install.sh
 
