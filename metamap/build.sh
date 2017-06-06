@@ -8,10 +8,12 @@ export PATH=$PREFIX/public_mm/bin:$PATH
 
 #cd $PREFIX/public_mm
 
-BASEDIR=$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM
+BASEDIR=$PREFIX/share/$PKG_NAME-$PKG_VERSION
 
-#cp -R $SRC_DIR  $BASEDIR
-cp -R * $BASEDIR
+
+mkdir -p $BASEDIR
+cp -R $SRC_DIR  $BASEDIR
+#cp -R * $BASEDIR
 
 export BASEDIR
 export JAVA_HOME
