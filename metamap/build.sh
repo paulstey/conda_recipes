@@ -20,7 +20,8 @@ export JAVA_HOME
 
 cd $BASEDIR/public_mm
 
-rm $BASEDIR/public_mm/MedPost-SKR/src/gov
+rm -rf $BASEDIR/public_mm/MedPost-SKR/src/gov
+rm -rf $BASEDIR/public_mm/MedPost-SKR/src/main/java/gov
 
 #mkdir -p $BASEDIR/public_mm/MedPost-SKR/src/gov/gov       # HACK: this is the worst
 
