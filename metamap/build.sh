@@ -20,6 +20,8 @@ export JAVA_HOME
 
 cd $BASEDIR/public_mm
 
+
+# The two directories below are symlinks to nothing; so we delete them
 rm -rf $BASEDIR/public_mm/MedPost-SKR/src/gov
 rm -rf $BASEDIR/public_mm/MedPost-SKR/src/main/java/gov
 
