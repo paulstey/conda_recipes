@@ -1,0 +1,24 @@
+
+# r-kinship, last modified 2017-06-26
+
+package:
+    name: r-kinship
+    version: '1.1.0'
+source:
+    fn: kinship_1.1.0-23.tar.gz
+    url: http://cran.r-project.org/src/contrib/Archive/kinship/kinship_1.1.0-23.tar.gz
+build:
+    rpaths:
+        - lib/R/lib/
+        - lib/
+    string: r3.3.2_0
+requirements:
+    build: []
+    run:
+        - r
+        - r-survival
+        - r-nlme
+        - r-lattice
+      
+      
+       
