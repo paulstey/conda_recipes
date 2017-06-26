@@ -1,10 +1,10 @@
 package:
   name: julia
-  version: "0.6.0"
+  version: "0.5.2"
 
 source:
-  fn: julia-0.6.0-linux-x86_64.tar.gz
-  url: https://julialang.s3.amazonaws.com/bin/linux/x64/0.6/julia-0.6.0-linux-x86_64.tar.gz
+  fn: julia-0.5.2-linux-x86_64.tar.gz
+  url: https://julialang.s3.amazonaws.com/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz
 
 
 build:
