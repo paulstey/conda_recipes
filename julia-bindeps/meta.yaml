@@ -1,0 +1,25 @@
+package:
+  name: julia-bindeps
+  version: 0.6.0
+
+source:
+  fn: v0.6.0.zip
+  url: https://github.com/JuliaLang/BinDeps.jl/archive/v0.6.0.zip
+
+requirements:
+  run:
+    - julia 
+    - julia-compat
+    - julia-uriparser
+    - julia-sha
+
+  build:
+    - julia
+    - julia-uriparser
+    - julia-sha
+    - julia-compat
+
+
+about:
+  home: https://github.com/JuliaLang/BinDeps.jl
+  license_file: LICENSE.md

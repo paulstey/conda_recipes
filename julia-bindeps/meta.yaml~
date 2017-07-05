@@ -1,0 +1,26 @@
+package:
+  name: julia-hdf5
+  version: 0.8.1
+
+source:
+  fn: v0.8.1.zip
+  url: https://github.com/JuliaIO/HDF5.jl/archive/v0.8.1.zip
+
+requirements:
+  run:
+    - julia 
+    - julia-blosc
+    - julia-bindeps 
+    - julia-compat
+
+  build:
+    - julia
+    - julia-blosc
+    - julia-bindeps
+    - julia-compat
+
+
+
+about:
+  home: https://github.com/quinnj/Dates.jl
+  license_file: LICENSE.md
