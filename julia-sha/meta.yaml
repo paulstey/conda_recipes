@@ -1,0 +1,29 @@
+# This file created by conda-build 2.1.10
+# meta.yaml template originally from:
+# /home/conda/conda_recipes/julia-sha, last modified Wed Jun 28 18:49:10 2017
+# ------------------------------------------------
+
+package:
+    name: julia-sha
+    version: v0.3.3
+source:
+    fn: v0.3.3.zip
+    url: https://github.com/staticfloat/SHA.jl/archive/v0.3.3.zip
+build:
+    noarch: ''
+    noarch_python: false
+    string: '0'
+requirements:
+    build:
+        - libgcc 5.2.0 0
+        - julia-compat v0.26.0 0
+        - zlib 1.2.8 3
+        - julia 0.6.0 1
+    run:
+        - julia
+        - julia-compat
+about:
+    home: https://github.com/staticfloat/SHA.jl
+    license_file: LICENSE.md
+extra:
+    final: true

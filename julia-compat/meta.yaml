@@ -1,0 +1,24 @@
+# This file created by conda-build 2.1.10
+# meta.yaml template originally from:
+# /home/conda/conda_recipes/julia-compat, last modified Wed Jun 28 15:35:19 2017
+# ------------------------------------------------
+
+package:
+    name: julia-compat
+    version: v0.26.0
+source:
+    fn: v0.26.0.zip
+    url: https://github.com/JuliaLang/Compat.jl/archive/v0.26.0.zip
+build:
+    noarch: ''
+    noarch_python: false
+    string: '0'
+requirements:
+    build: []
+    run:
+        - julia
+about:
+    home: https://github.com/JuliaLang/Compat.jl
+    license_file: LICENSE.md
+extra:
+    final: true
