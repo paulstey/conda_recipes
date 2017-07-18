@@ -1,0 +1,29 @@
+# This file created by conda-build 2.1.10
+# meta.yaml template originally from:
+# /home/conda/conda_recipes/julia-uriparser, last modified Wed Jul  5 19:01:35 2017
+# ------------------------------------------------
+
+package:
+    name: julia-uriparser
+    version: 0.1.8
+source:
+    fn: v0.1.8.zip
+    url: https://github.com/JuliaWeb/URIParser.jl/archive/v0.1.8.zip
+build:
+    noarch: ''
+    noarch_python: false
+    string: '0'
+requirements:
+    build:
+        - libgcc 5.2.0 0
+        - julia-compat v0.26.0 0
+        - zlib 1.2.8 3
+        - julia 0.6.0 1
+    run:
+        - julia
+        - julia-compat
+about:
+    home: https://github.com/JuliaWeb/URIParser.jl
+    license_file: LICENSE.md
+extra:
+    final: true
