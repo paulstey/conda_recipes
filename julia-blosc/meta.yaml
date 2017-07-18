@@ -1,0 +1,23 @@
+package:
+  name: julia-blosc
+  version: 0.2.1
+
+source:
+  fn: v0.2.1.zip
+  url: https://github.com/stevengj/Blosc.jl/archive/v0.2.1.zip
+
+requirements:
+  run:
+    - julia 
+    - julia-compat
+    - julia-bindeps
+
+  build:
+    - julia
+    - julia-bindeps
+    - julia-compat
+
+
+about:
+  home: https://github.com/stevengj/Blosc.jl
+  license_file: LICENSE.md
