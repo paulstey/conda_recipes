@@ -5,7 +5,7 @@
 
 package:
     name: julia-compat
-    version: v0.26.0
+    version: 0.26.0
 source:
     fn: v0.26.0.zip
     url: https://github.com/JuliaLang/Compat.jl/archive/v0.26.0.zip

@@ -5,7 +5,7 @@
 
 package:
     name: julia-sha
-    version: v0.3.3
+    version: 0.3.3
 source:
     fn: v0.3.3.zip
     url: https://github.com/staticfloat/SHA.jl/archive/v0.3.3.zip

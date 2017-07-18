@@ -7,4 +7,4 @@ DEST="$PREFIX/lib/julia/packages/v$JULIA_VERSION/$JULIA_PKG_NAME"
 mkdir -p "$DEST"
 cp --archive --no-target-directory "$PWD" "$DEST"
 
-julia -e "Pkg.build(\"$JULIA_PKG_NAME\")"
+julia -e "Pkg.resolve()"
