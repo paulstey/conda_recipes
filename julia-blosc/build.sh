@@ -1,7 +1,7 @@
 #!/bin/bash
 
 JULIA_PKG_NAME="Blosc"
-JULIA_VERSION=0.2.1
+JULIA_VERSION=0.6
 DEST="$PREFIX/lib/julia/packages/v$JULIA_VERSION/$JULIA_PKG_NAME"
 
 mkdir -p "$DEST"
