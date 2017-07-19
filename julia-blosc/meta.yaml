@@ -11,11 +11,13 @@ requirements:
     - julia 
     - julia-compat
     - julia-bindeps
+    - binutils
 
   build:
     - julia
     - julia-bindeps
     - julia-compat
+    - binutils
 
 
 about:
