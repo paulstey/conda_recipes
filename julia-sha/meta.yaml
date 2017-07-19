@@ -16,7 +16,7 @@ build:
 requirements:
     build:
         - libgcc 5.2.0 0
-        - julia-compat v0.26.0 0
+        - julia-compat 0.26.0 0
         - zlib 1.2.8 3
         - julia 0.6.0 1
     run:
