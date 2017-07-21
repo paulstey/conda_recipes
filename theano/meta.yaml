@@ -35,13 +35,15 @@ requirements:
     - numpy >=1.9.1
     - scipy >=0.14
     - six >=1.9.0
-
+    - nose
+    
   run:
     - python
     - numpy >=1.9.1
     - scipy >=0.14
     - six >=1.9.0
-
+    - nose
+    
 test:
   # Python imports
   imports:
@@ -87,7 +89,7 @@ test:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
-    - theano-cache --help
+    - theano-cache help
     - theano-nose --help
 
   # You can also put a file called run_test.py in the recipe that will be run
