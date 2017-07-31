@@ -11,10 +11,20 @@ build:
     - lib/
 requirements:
   build:
+    - r-bootstrap
+    - r-ipred
+    - r-suppdists
+    - r-survivalroc
+    - r-rmeta
     - r-prodlim
     - r-survival
     - r-base
   run:
+    - r-bootstrap
+    - r-ipred
+    - r-suppdists
+    - r-survivalroc
+    - r-rmeta
     - r-prodlim
     - r-survival
     - r-base
