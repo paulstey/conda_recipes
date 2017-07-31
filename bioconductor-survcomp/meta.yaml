@@ -1,0 +1,29 @@
+package:
+  name: bioconductor-survcomp
+  version: 1.26.0
+source:
+  fn: survcomp_1.26.0.tar.gz
+  url: http://bioconductor.org/packages/release/bioc/src/contrib/survcomp_1.26.0.tar.gz
+build:
+  number: 
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  build:
+    - r-prodlim
+    - r-survival
+    - r-base
+  run:
+    - r-prodlim
+    - r-survival
+    - r-base
+test:
+  commands:
+    - '$R -e "library(''survcomp'')"'
+about:
+  home: http://bioconductor.org/packages/release/bioc/html/survcomp.html
+  license: Artistic-2.0
+  summary: 'R package providing functions to assess and to compare the performance of risk prediction (survival) models.'
+
+    
