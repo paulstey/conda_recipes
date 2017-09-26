@@ -1,0 +1,86 @@
+{% set name = 'BiasedUrn' %}
+{% set version = '1.07' %}
+
+{% set posix = 'm2-' if win else '' %}
+{% set native = 'm2w64-' if win else '' %}
+
+package:
+  name: r-{{ name|lower }}
+  version: {{ version|replace("-", "_") }}
+
+source:
+  fn: {{ name }}_{{ version }}.tar.gz
+  url:
+    - https://cran.r-project.org/src/contrib/{{ name }}_{{ version }}.tar.gz
+    - https://cran.r-project.org/src/contrib/Archive/{{ name }}/{{ name }}_{{ version }}.tar.gz
+
+
+  # You can add a hash for the file here, like md5 or sha1
+  # md5: 49448ba4863157652311cc5ea4fea3ea
+  # sha1: 3bcfbee008276084cbb37a2b453963c61176a322
+  # patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build number.
+  number: 0
+
+  # This is required to make R link correctly on Linux.
+  rpaths:
+    - lib/R/lib/
+    - lib/
+
+
+requirements:
+  build:
+    - r-base
+    - posix                # [win]
+    - {{native}}toolchain  # [win]
+    - gcc                  # [not win]
+
+  run:
+    - r-base
+
+test:
+  commands:
+    # You can put additional test commands to be run here.
+    - $R -e "library('BiasedUrn')"  # [not win]
+    - "\"%R%\" -e \"library('BiasedUrn')\""  # [win]
+
+  # You can also put a file called run_test.py, run_test.sh, or run_test.bat
+  # in the recipe that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.
+
+about:
+  home: http://www.agner.org/random/ http://www.r-project.org
+  license: GPL-3
+  summary: Statistical models of biased sampling in the form of  univariate and multivariate
+    noncentral hypergeometric distributions,  including Wallenius' noncentral hypergeometric
+    distribution and Fisher's noncentral hypergeometric distribution  (also called extended
+    hypergeometric distribution).   See vignette("UrnTheory") for explanation of these
+    distributions.
+  license_family: GPL3
+
+# The original CRAN metadata for this package was:
+
+# Package: BiasedUrn
+# Type: Package
+# Title: Biased Urn Model Distributions
+# Version: 1.07
+# Date: 2015-12-28
+# Author: Agner Fog
+# Maintainer: Agner Fog <agner@agner.org>
+# Description: Statistical models of biased sampling in the form of  univariate and multivariate noncentral hypergeometric distributions,  including Wallenius' noncentral hypergeometric distribution and Fisher's noncentral hypergeometric distribution  (also called extended hypergeometric distribution).   See vignette("UrnTheory") for explanation of these distributions.
+# License: GPL-3
+# URL: http://www.agner.org/random/ http://www.r-project.org
+# Packaged: 2015-12-28 07:10:49 UTC; A
+# NeedsCompilation: yes
+# Repository: CRAN
+# Date/Publication: 2015-12-28 09:01:09
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
